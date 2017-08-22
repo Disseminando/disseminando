@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_ls_clientes" value="name:id_cli;datatype:int,name:data_cli;datatype:datetime,name:cnpj_cli;datatype:string,name:nome_cli;datatype:string,name:end_cli;datatype:string,name:bairro_cli;datatype:string,name:cidade_cli;datatype:int,name:estado_cli;datatype:int,name:cep_cli;datatype:string,name:fone_cli;datatype:string,name:email_cli;datatype:string,name:contato_cli;datatype:string,name:situacao_cli;datatype:int,name:obs_cli;datatype:string,name:usuario_cli;datatype:string" />
+</info>

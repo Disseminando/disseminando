@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_ls_msgebd" value="name:msg_id;datatype:int,name:msg_data;datatype:date,name:msg_categoria;datatype:int,name:msg_titulo;datatype:string,name:msg_texto;datatype:blob,name:msg_situacao;datatype:int,name:msg_foto;datatype:string,name:msg_diretorio;datatype:string,name:msg_cadastrador;datatype:string" />
+</info>

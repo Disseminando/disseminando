@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_cs_situacao" value="name:sit_cad_id;datatype:int,name:sit_cad_nome;datatype:string" />
+</info>
