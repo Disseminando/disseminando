@@ -233,6 +233,7 @@
 
 <!-- FOOTER
 ================================================== -->
+<div class="container">
 <div id="wrapfooter">
 	<div class="grid">
 		<div class="row" id="footer">
@@ -254,34 +255,29 @@
 			</div>
 			<!-- 3rd column -->
 			<div class="c3">
-				<h2 class="title"><i class="icon-link"></i>Rádio-OnLine</h2>
+				<h2 class="title"><i class="icon-envelope-alt"></i> Destaque</h2>
 				<hr class="footerstress">
-				<?php include('radio.html');?>
-			</div>
-			<div class="c3">
-				<h2 class="title"><i class="icon-envelope-alt"></i> Contato</h2>
-				<hr class="footerstress">
-				<dl>
-					<dd>E-mail: atendimento.disseminando@gmail.com</dd>
-				</dl>
-				<ul class="social-links" style="margin-top:15px;">					
-					<li class="facebook-link smallrightmargin">
-					<a href="#" class="facebook has-tip" target="_blank" title="Join us on Facebook">Facebook</a>
-					</li>
-					<li class="google-link smallrightmargin">
-					<a href="#" class="google has-tip" title="Google +" target="_blank">Google</a>
-					</li>
-				</ul>
-                <br />
-                <br />
                 <dl>				
                   <script language="JavaScript1.1" type="text/javascript" src="http://www.afiliados.posthaus.com.br/get_banner.jsp?mkt=PH6856&bann=202"></script>
-				</dl>			
+				</dl>
+				<h2 class="title"><i class="icon-envelope-alt"></i> Rádio online</h2>
+				<hr class="footerstress">
+				<dl>
+                <?php include('radio.html');?>
+				</dl>
 			</div>
 			<!-- end 4th column -->
+			<div class="c3">
+				<h2 class="title"><i class="icon-envelope-alt"></i> Parceiro</h2>
+				<hr class="footerstress">
+                <dl>				
+                  <a href="http://imecdnoticias.com/" target="_blank"><img src="images/radio01.jpg" width="250" heidth="250"></img></a>
+				</dl>				
+			</div>
 		</div>
 	</div>
 </div>
+
 <!-- copyright area -->
 <div class="copyright">
 	<div class="grid">
@@ -295,6 +291,7 @@
 	</div>
 </div>
 
+</div>
 </div>
 <!-- JAVASCRIPTS
 ================================================== -->
