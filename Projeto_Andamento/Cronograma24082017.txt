@@ -1,5 +1,6 @@
 Autor: Antonio borges
 Alterações a serem executadas.
 Data: 24/08/2017
-1- Criação da função rodapé.
+1- Criação da função rodapé. OK
+2- Criação da função slider anuncio 02
 ***********************************************************
