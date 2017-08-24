@@ -88,7 +88,38 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 		enable_page_level_ads: true
 	  });
 	</script>
-
+	<!-- Controle do Slider -->
+	    <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+		<noscript>
+			<style>
+				.es-carousel ul{
+					display:block;
+				}
+			</style>
+		</noscript>
+		<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+			<div class="rg-image-wrapper">
+				{{if itemsCount > 1}}
+					<div class="rg-image-nav">
+						<a href="#" class="rg-image-nav-prev">Previous Image</a>
+						<a href="#" class="rg-image-nav-next">Next Image</a>
+					</div>
+				{{/if}}
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div>
+				<div class="rg-caption-wrapper">
+					<div class="rg-caption" style="display:none;">
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</script>
+    <!-- Controle do Slider -->
 </head>
 <body>
 <div class="boxedtheme">
@@ -122,12 +153,38 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 	</div>
 </div>
 <div class="">
-	<!-- SLIDER AREA
-	================================================== -->
-	<div style="height:420px;" id="da-slider" class="da-slider">
-		<?php include('util/slider_principal.html');?>
-
-</div>
+<!-- SLIDER AREA
+================================================== -->
+<div class="container">			
+			<div class="content">
+				<div id="rg-gallery" class="rg-gallery">
+					<div class="rg-thumbs">
+						<!-- Elastislide Carousel Thumbnail Viewer -->
+						<div class="es-carousel-wrapper">
+							<div class="es-nav">
+								<span class="es-nav-prev">Previous</span>
+								<span class="es-nav-next">Next</span>
+							</div>
+							<div class="es-carousel">
+								<ul>
+									<li><a href="#"><img src="images/slider/thumbs/1.jpg" data-large="images/slider/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>
+									<li><a href="#"><img src="images/slider/thumbs/2.jpg" data-large="images/slider/2.jpg" alt="image02" data-description="A plaintful story from a sistering vale" /></a></li>
+									<li><a href="#"><img src="images/slider/thumbs/3.jpg" data-large="images/slider/3.jpg" alt="image03" data-description="A plaintful story from a sistering vale" /></a></li>
+									<li><a href="#"><img src="images/slider/thumbs/4.jpg" data-large="images/slider/4.jpg" alt="image04" data-description="My spirits to attend this double voice accorded" /></a></li>
+									<li><a href="#"><img src="images/slider/thumbs/5.jpg" data-large="images/slider/5.jpg" alt="image05" data-description="And down I laid to list the sad-tuned tale" /></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- End Elastislide Carousel Thumbnail Viewer -->
+					</div><!-- rg-thumbs -->
+				</div><!-- rg-gallery -->
+			</div><!-- content -->
+		</div><!-- container -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+		<script type="text/javascript" src="js/gallery.js"></script>
 </div>
 <!-- UNDER SLIDER - BLACK AREA
 ================================================== -->
