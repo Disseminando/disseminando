@@ -55,17 +55,19 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta name="viewport" content="width=device-width"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 <title>Disseminando | Sua fé sem fronteiras.</title>
-<!-- STYLES & JQUERY 
-================================================== -->
+<link rel="shortcut icon" href="../favicon.ico"> 
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <link rel="stylesheet" type="text/css" href="css/icons.css"/>
 <link rel="stylesheet" type="text/css" href="css/slider.css"/>
 <link rel="stylesheet" type="text/css" href="css/skinblue.css"/>
 <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
-<script src="js/jquery-1.9.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+
+
 
 <!-- inicio do Analytics -->
 	<script>
@@ -89,12 +91,7 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 	  });
 	</script>
 	<!-- Controle do Slider -->
-	    <link rel="shortcut icon" href="../favicon.ico"> 
-        <link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/elastislide.css" />
-		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
-		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+        
 		<noscript>
 			<style>
 				.es-carousel ul{
@@ -119,6 +116,8 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 				</div>
 			</div>
 		</script>
+		
+		
     <!-- Controle do Slider -->
 </head>
 <body>
@@ -152,10 +151,13 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 		</div>
 	</div>
 </div>
-<div class="">
+
 <!-- SLIDER AREA
 ================================================== -->
-<div class="container">			
+<div class="container">
+			<div class="header">		
+                <div class="clr"></div>
+			</div>			
 			<div class="content">
 				<div id="rg-gallery" class="rg-gallery">
 					<div class="rg-thumbs">
@@ -167,17 +169,18 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 							</div>
 							<div class="es-carousel">
 								<ul>
-									<li><a href="#"><img src="images/slider/thumbs/1.jpg" data-large="images/slider/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>
-									<li><a href="#"><img src="images/slider/thumbs/2.jpg" data-large="images/slider/2.jpg" alt="image02" data-description="A plaintful story from a sistering vale" /></a></li>
-									<li><a href="#"><img src="images/slider/thumbs/3.jpg" data-large="images/slider/3.jpg" alt="image03" data-description="A plaintful story from a sistering vale" /></a></li>
-									<li><a href="#"><img src="images/slider/thumbs/4.jpg" data-large="images/slider/4.jpg" alt="image04" data-description="My spirits to attend this double voice accorded" /></a></li>
-									<li><a href="#"><img src="images/slider/thumbs/5.jpg" data-large="images/slider/5.jpg" alt="image05" data-description="And down I laid to list the sad-tuned tale" /></a></li>
+								    <li><a href="#"><img src="images/slider/thumbs/03.jpg" data-large="images/slider/03.jpg" alt="image03" /></a></li>
+								    <li><a href="http://www.imecdnoticias.com"><img src="images/slider/thumbs/04.jpg" data-large="images/slider/04.jpg" alt="image04" /></a></li>
+									<li><a href="#"><img src="images/slider/thumbs/01.jpg" data-large="images/slider/01.jpg" alt="image01" /></a></li>
+									<li><a href="#"><img src="images/slider/thumbs/02.jpg" data-large="images/slider/02.jpg" alt="image02" /></a></li>
+									
 								</ul>
 							</div>
 						</div>
 						<!-- End Elastislide Carousel Thumbnail Viewer -->
 					</div><!-- rg-thumbs -->
 				</div><!-- rg-gallery -->
+				
 			</div><!-- content -->
 		</div><!-- container -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -185,7 +188,7 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
 		<script type="text/javascript" src="js/gallery.js"></script>
-</div>
+
 <!-- UNDER SLIDER - BLACK AREA
 ================================================== -->
 <div class="undersliderblack">
@@ -436,6 +439,7 @@ $(document).ready(function(){
     });
   });
 </script>
+
 </body>
 </html>
 <?php
