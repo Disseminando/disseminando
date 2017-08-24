@@ -1,4 +1,57 @@
-<?php include("Connections/con01.php");?>
+<?php require_once('Connections/con01.php'); ?>
+<?php
+if (!function_exists("GetSQLValueString")) {
+function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
+{
+  if (PHP_VERSION < 6) {
+    $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
+  }
+
+  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+
+  switch ($theType) {
+    case "text":
+      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+      break;    
+    case "long":
+    case "int":
+      $theValue = ($theValue != "") ? intval($theValue) : "NULL";
+      break;
+    case "double":
+      $theValue = ($theValue != "") ? doubleval($theValue) : "NULL";
+      break;
+    case "date":
+      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+      break;
+    case "defined":
+      $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
+      break;
+  }
+  return $theValue;
+}
+}
+
+$maxRows_ls_msgebd = 4;
+$pageNum_ls_msgebd = 0;
+if (isset($_GET['pageNum_ls_msgebd'])) {
+  $pageNum_ls_msgebd = $_GET['pageNum_ls_msgebd'];
+}
+$startRow_ls_msgebd = $pageNum_ls_msgebd * $maxRows_ls_msgebd;
+
+mysql_select_db($database_con01, $con01);
+$query_ls_msgebd = "SELECT msg_id, msg_data, msg_categoria, msg_titulo, msg_texto, msg_situacao, msg_foto, msg_diretorio, msg_cadastrador FROM mensagem WHERE msg_categoria=1 ORDER BY msg_data DESC";
+$query_limit_ls_msgebd = sprintf("%s LIMIT %d, %d", $query_ls_msgebd, $startRow_ls_msgebd, $maxRows_ls_msgebd);
+$ls_msgebd = mysql_query($query_limit_ls_msgebd, $con01) or die(mysql_error());
+$row_ls_msgebd = mysql_fetch_assoc($ls_msgebd);
+
+if (isset($_GET['totalRows_ls_msgebd'])) {
+  $totalRows_ls_msgebd = $_GET['totalRows_ls_msgebd'];
+} else {
+  $all_ls_msgebd = mysql_query($query_ls_msgebd);
+  $totalRows_ls_msgebd = mysql_num_rows($all_ls_msgebd);
+}
+$totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -73,7 +126,8 @@
 	================================================== -->
 	<div style="height:420px;" id="da-slider" class="da-slider">
 		<?php include('util/slider_principal.html');?>
-	</div>
+
+</div>
 </div>
 <!-- UNDER SLIDER - BLACK AREA
 ================================================== -->
@@ -162,15 +216,159 @@
 			</div>
 		</div>
 	</div>
-	<!-- SHOWCASE
-	================================================== -->
-	<?php include('util/anuncio02.html');?>
-
+	<br>
+	<div class="grid">
+		<div class="shadowundertop">
+		</div>
+		<div class="row">
+			<div class="c12">
+				<h1 class="maintitle ">
+				<span>Mensagens Recentes</span>
+				</h1>
+			    <?php do { ?>
+				<div id="content">
+					<div class="boxfourcolumns fw">
+						<div class="container">
+						<div class="grid">
+							<?php
+                                echo '<img src="'.$row_ls_msgebd['msg_diretorio'].$row_ls_msgebd['msg_foto'].'"width="150" alt="350"</>';
+			                ?>
+							<br>
+							<strong><a href="evangelismo02.php?msg_id=<?php echo $row_ls_msgebd['msg_id']; ?>"><?php echo $row_ls_msgebd['msg_titulo']; ?></a></strong>
+							<br>
+							<p align="justify">
+							 <?php echo mb_strimwidth($row_ls_msgebd['msg_texto'], 4, 180, "...");?>
+							</p>
+							</div>						
+						</div>
+					</div>
+					<!-- box -->
+				</div>
+				<?php } while ($row_ls_msgebd = mysql_fetch_assoc($ls_msgebd)); ?>
+			</div>
+		</div>
+</div>
+<!-- end grid -->
+<!-- SHOWCASE
+================================================== -->
+	<div class="row space-top">
+		<div class="c12 space-top">
+			<h1 class="maintitle ">
+			<span>Anuncios</span>
+			</h1>
+		</div>
+	</div>
+	<div class="row space-bot">
+		<div class="c12">
+			<div class="list_carousel">
+				<div class="carousel_nav">
+					<a class="prev" id="car_prev" href="#"><span>prev</span></a>
+					<a class="next" id="car_next" href="#"><span>next</span></a>
+				</div>
+				<div class="clearfix">
+				</div>
+				<ul id="recent-projects">
+					<!--featured-projects 1-->
+					<li>
+					<div class="featured-projects">
+						<div class="featured-projects-image">
+						<a href="curriculo_cadastro.php"><img src="./images/Modelo_Anuncio05.png" alt="Cadastrar Curriculo" title="Cadastrar Curriculo"></img></a>
+					</div>						
+					</div>
+					</li>
+					<!--featured-projects 2-->
+					<li>
+					<div class="featured-projects">
+						<div class="featured-projects-image">
+							<a href="#"><img src="./images/Modelo_Anuncio02.png" alt="Anuncie Aqui" title="Anuncie Aqui"></a>
+						</div>						
+					</div>
+					</li>
+					<!--featured-projects 3-->
+					<li>
+					<div class="featured-projects">
+						<div class="featured-projects-image">
+							<a href="http://produto.mercadolivre.com.br/MLB-898592082-camiseta-evangelismo-algodo-branca-_JM"><img src="./images/Modelo_Anuncio03.png" alt="Camiseta Evangelismo" title="Camiseta Evangelismo"></a>
+						</div>						
+					</div>
+					</li>
+					<!--featured-projects 4-->
+					<li>
+					<div class="featured-projects">
+						<div class="featured-projects-image">
+							<a href="http://produto.mercadolivre.com.br/MLB-898596714-camiseta-evangelismo-babylook-algodo-branca-_JM"><img src="./images/Modelo_Anuncio04.png" alt="Camiseta Evangelismo" title="Camiseta Evangelismo"></a>
+						</div>						
+					</div>
+					</li>
+					<!--featured-projects 5-->
+					<li>
+					<div class="featured-projects">
+						<div class="featured-projects-image">
+							<a href="#"><img src="./images/Modelo_Anuncio01.jpg" alt="Anuncie Aqui" title="Anuncie Aqui"></a>
+						</div>						
+					</div>
+					</li>
+					<!--featured-projects 6-->					
+				</ul>
+				<div class="clearfix">
+				</div>
+			</div>
+		</div>
+	</div>
+	
 <!-- FOOTER
 ================================================== -->
 <?php include('util/rodape.html');?>
 
-<!-- Call opacity on hover images from carousel-->
+<!-- all -->
+<script src="./js/modernizr-latest.js"></script>
+
+<!-- menu & scroll to top -->
+<script src="./js/common.js"></script>
+
+<!-- slider -->
+<script src="./js/jquery.cslider.js"></script>
+
+<!-- cycle -->
+<script src="./js/jquery.cycle.js"></script>
+
+<!-- carousel items -->
+<script src="./js/jquery.carouFredSel-6.0.3-packed.js"></script>
+
+<!-- twitter -->
+<script src="./js/jquery.tweet.js"></script>
+
+<!-- Call Showcase - change 4 from min:4 and max:4 to the number of items you want visible -->
+<script type="text/javascript">
+$(window).load(function(){			
+			$('#recent-projects').carouFredSel({
+				responsive: true,
+				width: '100%',
+				auto: true,
+				circular	: true,
+				infinite	: false,
+				prev : {
+					button		: "#car_prev",
+					key			: "left",
+						},
+				next : {
+					button		: "#car_next",
+					key			: "right",
+							},
+				swipe: {
+					onMouse: true,
+					onTouch: true
+					},
+				scroll : 2000,
+				items: {
+					visible: {
+						min: 4,
+						max: 4
+					}
+				}
+			});
+		});	
+</script>
 <script type="text/javascript">
 $(document).ready(function(){
     $("img.imgOpa").hover(function() {
@@ -183,3 +381,6 @@ $(document).ready(function(){
 </script>
 </body>
 </html>
+<?php
+mysql_free_result($ls_msgebd);
+?>
