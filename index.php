@@ -107,15 +107,10 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 			<nav style="margin-bottom:0;" id="topNav">
 			<ul id="responsivemenu">
 				<li class="active"><a href="index.php"><i class="icon-home homeicon"></i><span class="showmobile">Inicio</span></a></li>
-				<li><a href="#">Menu</a>
-				<ul style="display: none;">
-					<li><a href="projetoAna.php">ANA</a></li>										
-					<li><a href="biblia01.php">Bíblia</a></li>
-					<li><a href="curriculo_login.php">Curriculo</a></li>
-                    <li><a href="vagas01.php">Restrito</a></li>
-				</ul>
-				</li>							
+				<li class="last"><a href="projetoAna.php">Ana</a></li>
+				<li class="last"><a href="biblia01.php">Bíblia</a></li>
 				<li class="last"><a href="contato.php">Contato</a></li>
+				<li class="last"><a href="vagas01.php">Restrito</a></li>
 			</ul>
 			</nav>
 		</div>
@@ -280,8 +275,7 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 					<li>
 					<div class="featured-projects">
 						<div class="featured-projects-image">
-							<a href="#"><img src="./images/Modelo_Anuncio02.png" alt="Anuncie Aqui" title="Anuncie Aqui"></a>
-						</div>						
+                        <a target="_blank"  href="https://www.amazon.com.br/gp/product/8000003635/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=8000003635&linkCode=as2&tag=disseminando-20&linkId=1ac4876a37d335b4a28ed610fde66453"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=BR&ASIN=8000003635&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=disseminando-20" ></a><img src="//ir-br.amazon-adsystem.com/e/ir?t=disseminando-20&l=am2&o=33&a=8000003635" width="auto" height="auto" border="0" alt="" style="border:none !important; margin:0px !important;" />						</div>						
 					</div>
 					</li>
 					<!--featured-projects 3-->
