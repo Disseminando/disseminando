@@ -55,19 +55,17 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<meta name="viewport" content="width=device-width"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 <title>Disseminando | Sua fé sem fronteiras.</title>
-<link rel="shortcut icon" href="../favicon.ico"> 
+<!-- STYLES & JQUERY 
+================================================== -->
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <link rel="stylesheet" type="text/css" href="css/icons.css"/>
 <link rel="stylesheet" type="text/css" href="css/slider.css"/>
 <link rel="stylesheet" type="text/css" href="css/skinblue.css"/>
 <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
-<link rel="stylesheet" type="text/css" href="css/elastislide.css" />
-
-
+<script src="js/jquery-1.9.0.min.js"></script>
 
 <!-- inicio do Analytics -->
 	<script>
@@ -90,35 +88,7 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 		enable_page_level_ads: true
 	  });
 	</script>
-	<!-- Controle do Slider -->
-        
-		<noscript>
-			<style>
-				.es-carousel ul{
-					display:block;
-				}
-			</style>
-		</noscript>
-		<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
-			<div class="rg-image-wrapper">
-				{{if itemsCount > 1}}
-					<div class="rg-image-nav">
-						<a href="#" class="rg-image-nav-prev">Previous Image</a>
-						<a href="#" class="rg-image-nav-next">Next Image</a>
-					</div>
-				{{/if}}
-				<div class="rg-image"></div>
-				<div class="rg-loading"></div>
-				<div class="rg-caption-wrapper">
-					<div class="rg-caption" style="display:none;">
-						<p></p>
-					</div>
-				</div>
-			</div>
-		</script>
-		
-		
-    <!-- Controle do Slider -->
+
 </head>
 <body>
 <div class="boxedtheme">
@@ -152,42 +122,12 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 	</div>
 </div>
 
-<!-- SLIDER AREA
-================================================== -->
-<div class="container">
-			<div class="header">		
-                <div class="clr"></div>
-			</div>			
-			<div class="content">
-				<div id="rg-gallery" class="rg-gallery">
-					<div class="rg-thumbs">
-						<!-- Elastislide Carousel Thumbnail Viewer -->
-						<div class="es-carousel-wrapper">
-							<div class="es-nav">
-								<span class="es-nav-prev">Previous</span>
-								<span class="es-nav-next">Next</span>
-							</div>
-							<div class="es-carousel">
-								<ul>
-								    <li><a href="#"><img src="images/slider/thumbs/03.jpg" data-large="images/slider/03.jpg" alt="image03" /></a></li>
-								    <li><a href="http://www.imecdnoticias.com"><img src="images/slider/thumbs/04.jpg" data-large="images/slider/04.jpg" alt="image04" /></a></li>
-									<li><a href="#"><img src="images/slider/thumbs/01.jpg" data-large="images/slider/01.jpg" alt="image01" /></a></li>
-									<li><a href="#"><img src="images/slider/thumbs/02.jpg" data-large="images/slider/02.jpg" alt="image02" /></a></li>
-									
-								</ul>
-							</div>
-						</div>
-						<!-- End Elastislide Carousel Thumbnail Viewer -->
-					</div><!-- rg-thumbs -->
-				</div><!-- rg-gallery -->
-				
-			</div><!-- content -->
-		</div><!-- container -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
-		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
-		<script type="text/javascript" src="js/gallery.js"></script>
+	<!-- SLIDER AREA
+	================================================== -->
+
+		<?php include('util/slider_principal.html');?>
+
+
 
 <!-- UNDER SLIDER - BLACK AREA
 ================================================== -->
@@ -439,7 +379,6 @@ $(document).ready(function(){
     });
   });
 </script>
-
 </body>
 </html>
 <?php
