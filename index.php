@@ -249,7 +249,7 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 	<div class="row space-top">
 		<div class="c12 space-top">
 			<h1 class="maintitle ">
-			<span>Anuncios</span>
+			<span>DESTAQUES</span>
 			</h1>
 		</div>
 	</div>
@@ -267,22 +267,26 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 					<li>
 					<div class="featured-projects">
 						<div class="featured-projects-image">
-						<a href="curriculo_cadastro.php"><img src="./images/Modelo_Anuncio05.png" alt="Cadastrar Curriculo" title="Cadastrar Curriculo"></img></a>
-					</div>						
+						<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=BR&source=ac&ref=tf_til&ad_type=product_link&tracking_id=disseminando-20&marketplace=amazon&region=BR&placement=B0134QNNK0&asins=B0134QNNK0&linkId=e3e8113220968e1f58b93d51fad1999d&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
+					     </div>						
 					</div>
 					</li>
 					<!--featured-projects 2-->
 					<li>
 					<div class="featured-projects">
 						<div class="featured-projects-image">
-                        <a target="_blank"  href="https://www.amazon.com.br/gp/product/8000003635/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=8000003635&linkCode=as2&tag=disseminando-20&linkId=1ac4876a37d335b4a28ed610fde66453"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=BR&ASIN=8000003635&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=disseminando-20" ></a><img src="//ir-br.amazon-adsystem.com/e/ir?t=disseminando-20&l=am2&o=33&a=8000003635" width="auto" height="auto" border="0" alt="" style="border:none !important; margin:0px !important;" />						</div>						
+						<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=BR&source=ac&ref=tf_til&ad_type=product_link&tracking_id=disseminando-20&marketplace=amazon&region=BR&placement=8535928812&asins=8535928812&linkId=7f18838823ecbf5b56b8d3d1bcbfb238&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
+                        </div>						
 					</div>
 					</li>
 					<!--featured-projects 3-->
 					<li>
 					<div class="featured-projects">
 						<div class="featured-projects-image">
-							<a href="http://produto.mercadolivre.com.br/MLB-898592082-camiseta-evangelismo-algodo-branca-_JM"><img src="./images/Modelo_Anuncio03.png" alt="Camiseta Evangelismo" title="Camiseta Evangelismo"></a>
+						<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=BR&source=ac&ref=tf_til&ad_type=product_link&tracking_id=disseminando-20&marketplace=amazon&region=BR&placement=8000003635&asins=8000003635&linkId=99d0592d2fbae39aa6498df496b5aaca&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
 						</div>						
 					</div>
 					</li>
@@ -290,7 +294,8 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 					<li>
 					<div class="featured-projects">
 						<div class="featured-projects-image">
-							<a href="http://produto.mercadolivre.com.br/MLB-898596714-camiseta-evangelismo-babylook-algodo-branca-_JM"><img src="./images/Modelo_Anuncio04.png" alt="Camiseta Evangelismo" title="Camiseta Evangelismo"></a>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=BR&source=ac&ref=tf_til&ad_type=product_link&tracking_id=disseminando-20&marketplace=amazon&region=BR&placement=8538303112&asins=8538303112&linkId=d127961a89418f85cfe66b9c432ae15b&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
 						</div>						
 					</div>
 					</li>
@@ -298,7 +303,8 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 					<li>
 					<div class="featured-projects">
 						<div class="featured-projects-image">
-							<a href="#"><img src="./images/Modelo_Anuncio01.jpg" alt="Anuncie Aqui" title="Anuncie Aqui"></a>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=BR&source=ac&ref=tf_til&ad_type=product_link&tracking_id=disseminando-20&marketplace=amazon&region=BR&placement=B06Y1GT6CQ&asins=B06Y1GT6CQ&linkId=c20bd274ebeb209779909a0a18fedcd9&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
 						</div>						
 					</div>
 					</li>
