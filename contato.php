@@ -15,29 +15,8 @@
 <div class="boxedtheme">
 <!-- TOP LOGO & MENU
 ================================================== -->
-<div class="grid">
-	<div class="row space-bot">
-		<!--Logo-->
-		<div class="c4">
-			<a href="index.php">
-			<img src="images/logo02.jpg" class="logo" alt="">
-			</a>
-		</div>
-		<!--Menu-->
-		<div class="c8">
-			<nav id="topNav">
-			<ul id="responsivemenu">
-				<li class="active"><a href="index.php"><i class="icon-home homeicon"></i><span class="showmobile">Inicio</span></a></li>
-				<li><a href="#">Menu</a>
-				<ul style="display: none;">
-					<li><a href="projetoAna.php">ANA</a></li>										
-					<li><a href="biblia01.php">Bíblia</a></li>
-					<li><a href="curriculo_login.php">Curriculo</a></li>			
-			</ul>
-			</nav>
-		</div>
-	</div>
-</div>
+<?php include('util/menu01.html');?>
+<br>
 <!-- HEADER
 ================================================== -->
 <div class="undermenuarea">
