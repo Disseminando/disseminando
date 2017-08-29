@@ -124,7 +124,7 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 				<!--Box 3-->
 				<div class="c4 introbox introboxlast">
 					<div class="introboxinner">
-                     						<a href="http://rede.natura.net/espaco/disseminando" target="_blank"><img src="images/natura03.jpg" alt="Natura Bem Estar" title="Natura Bem Estar"></img></a>
+						<img src="images/natura03.jpg" alt="Natura Bem Estar" title="Natura Bem Estar"></img>
 					</div>
 				</div>
 			</div>
@@ -183,9 +183,9 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 		<div class="c4">
 			<h2 class="title hometitlebg"><i class="icon-user" style="margin-right:10px;"></i>Oportunidades</h2>
 			<div class="noshadowbox">
-				<a href="http://rede.natura.net/espaco/disseminando" target="_blank"><img src="images/natura01.jpg" class="logo" alt="Natura Bem Estar" title="Revenda Natura Em Breve"></a>
+				<a href="#"><img src="images/natura01.jpg" class="logo" alt="Natura Bem Estar" title="Revenda Natura Em Breve"></a>
 				<p class="bottomlink">
-					<a href="http://rede.natura.net/espaco/disseminando" target="_blank" class="neutralbutton"><i class="icon-link"></i></a>
+					<a href="#" class="neutralbutton"><i class="icon-link"></i></a>
 				</p>
 			</div>
 		</div>
