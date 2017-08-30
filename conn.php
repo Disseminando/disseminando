@@ -1,7 +1,7 @@
 <?php
-$host = "mysql.disseminando.com"; 
-$usuario = "disseminando";
-$senha = "a2b4m9";
+$host = "localhost"; 
+$usuario = "root";
+$senha = "";
 $banco = "disseminando";
  
 $conn = mysql_connect($host, $usuario, $senha);

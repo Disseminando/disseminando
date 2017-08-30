@@ -2,5 +2,7 @@ Autor: Antonio borges
 Alterações a serem executadas.
 Data: 24/08/2017
 1- Criação da função rodapé. OK
-2- Criação da função slider anuncio 02
-***********************************************************
+2- Criação da função slider anuncio 0K
+3- Criação do formulario de pesquisa retornando os resultados via ajax
+   A consulta devera verificar o parametro informado nas categorias escola biblica e evangelismo.
+**************************************************************************************************************************

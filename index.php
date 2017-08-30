@@ -138,18 +138,18 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 <div class="grid">
 	<div class="row space-bot">
 		<!--CAIXA DE PESQUISA-->
-		    <div class="container">
-                <form action="" name="form_pesquisar">			
-				    <table class="table table-bordered" bordered="0">
-						<thead>
-						  <tr>
-							<th width="12%"><img src="images/lupa01.jpg" width="80 height="80"></img></th>
-							<th><input type="text" class="form-control" id="pesquisa" placeholder="Informe o Assunto..." name="pesquisa"></th>
-						  </tr>
-						</thead>
-				    </table>
-			    </form>
+		<div class="c12 space-top">
+			<h1 class="maintitle "><span>PESQUISAR</span></h1>
+		    <div class="container">                			
+			<input type="text" id="pesquisar" placeholder="Informe o Assunto..." maxlength="40" onkeyup="pesquisaMensagem(this.value)">
+			<br>
+			<div id="resultado"></div>
+				<br />
+			<div id="conteudo">
+			    <br>
+			</div>			
 			</div>
+		</div>
 		<div class="row space-top">
 		<div class="c12 space-top">
 			<h1 class="maintitle ">
