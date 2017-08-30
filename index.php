@@ -58,8 +58,6 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 <meta name="viewport" content="width=device-width"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Disseminando | Sua fé sem fronteiras.</title>
-<!-- STYLES & JQUERY 
-================================================== -->
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <link rel="stylesheet" type="text/css" href="css/icons.css"/>
 <link rel="stylesheet" type="text/css" href="css/slider.css"/>
@@ -88,7 +86,7 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 		enable_page_level_ads: true
 	  });
 	</script>
-
+<script type="text/javascript" src="js/funcs.js"></script>
 </head>
 <body>
 <div class="boxedtheme">
@@ -140,16 +138,15 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 		<!--CAIXA DE PESQUISA-->
 		<div class="c12 space-top">
 			<h1 class="maintitle "><span>PESQUISAR</span></h1>
-		    <div class="container">                			
-			<input type="text" id="pesquisar" placeholder="Informe o Assunto..." maxlength="40" onkeyup="pesquisaMensagem(this.value)">
-			<br>
+        </div>		
+		<div class="container">                			
+			<input type="text" id="pesquisar" placeholder="Informe o Titulo...." onkeyup="pesquisar(this.value)">
 			<div id="resultado"></div>
-				<br />
-			<div id="conteudo">
-			    <br>
-			</div>			
-			</div>
-		</div>
+			<br /><br />
+			<font size="3" align="justify" color="blue"><div id="conteudo"></div></font> 
+		</div>		
+		
+	</div>
 		<div class="row space-top">
 		<div class="c12 space-top">
 			<h1 class="maintitle ">

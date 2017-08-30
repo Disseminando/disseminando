@@ -12,11 +12,11 @@ include("conn.php");
 $valor = $_GET['valor'];
  
 // Procura titulos no banco relacionados ao valor
-$sql = mysql_query("SELECT * FROM mensagem WHERE msg_id LIKE '%".$valor."%'");
+$sql = mysql_query("SELECT * FROM mensagem WHERE msg_titulo LIKE '%".$valor."%'");
  
 // Exibe todos os valores encontrados
-while ($noticias = mysql_fetch_object($sql)) {
-	echo "<a href=\"javascript:func()\" onclick=\"exibirConteudo('".$noticias->msg_id."')\">" . $noticias->msg_texto."</a><br />";
+while ($mensagem = mysql_fetch_object($sql)) {
+	echo "<a href=\"javascript:func()\" onclick=\"exibir('".$mensagem->msg_id."')\">" . $mensagem->msg_titulo."</a><br />";
 }
  
 ?>

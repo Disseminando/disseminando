@@ -15,11 +15,12 @@ $id = $_GET['msg_id'];
 $sql = mysql_query("SELECT * FROM mensagem WHERE msg_id = '".$id."'");
  
 // Pega os dados e armazena em uma variável
-$noticia = mysql_fetch_object($sql);
+$mensagem = mysql_fetch_object($sql);
  
 // Exibe o conteúdo da notica
-echo "CONSULTA DADOS CADASTRAIS <br /><br />";
-echo "Titulo:&nbsp".$noticia->msg_titulo."<br />";
+echo "CONSULTA MENSAGEM <br /><br />";
+echo "Titulo:&nbsp".$mensagem->msg_titulo."<br />";
+echo "Mensagem:&nbsp".$mensagem->msg_texto."<br />";
 ?>
 </body>
 </html>
