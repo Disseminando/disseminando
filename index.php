@@ -63,8 +63,9 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 <link rel="stylesheet" type="text/css" href="css/slider.css"/>
 <link rel="stylesheet" type="text/css" href="css/skinblue.css"/>
 <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
-<script src="js/jquery-1.9.0.min.js"></script>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css'>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <!-- inicio do Analytics -->
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -93,14 +94,9 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 <!-- TOP LOGO & MENU
 ================================================== -->
 <?php include('util/menu01.html');?>
-
-	<!-- SLIDER AREA
-	================================================== -->
-
-		<?php include('util/slider_principal.html');?>
-
-
-
+<!-- SLIDER AREA
+================================================== -->
+<?php include('util/slider_principal.html');?>
 <!-- UNDER SLIDER - BLACK AREA
 ================================================== -->
 <div class="undersliderblack">
@@ -116,13 +112,13 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 				<!--Box 2-->
 				<div class="c4 introbox introboxmiddle">
 					<div class="introboxinner">
-						<img src="images/banner01.png"></img>
+					<img src="images/banner01.png"></img>
 					</div>
 				</div>
 				<!--Box 3-->
 				<div class="c4 introbox introboxlast">
 					<div class="introboxinner">
-                     						<a href="http://rede.natura.net/espaco/disseminando" target="_blank"><img src="images/natura03.jpg" alt="Natura Bem Estar" title="Natura Bem Estar"></img></a>
+                    <a href="http://rede.natura.net/espaco/disseminando" target="_blank"><img src="images/natura03.jpg" alt="Natura Bem Estar" title="Natura Bem Estar"></img></a>
 					</div>
 				</div>
 			</div>
@@ -296,30 +292,22 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 			</div>
 		</div>
 	</div>
-	
-<!-- FOOTER
-================================================== -->
+<!--SLIDER EVANGELISMO -->
+<?php include('videos.html');?>
+<!--SLIDER EVANGELISMO -->
+<!-- FOOTER ================================================== -->
 <?php include('util/rodape.html');?>
-
-<!-- all -->
+<!-- FOOTER ================================================== -->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js'></script>
+<script src="js/index.js"></script>
 <script src="./js/modernizr-latest.js"></script>
-
-<!-- menu & scroll to top -->
 <script src="./js/common.js"></script>
-
-<!-- slider -->
 <script src="./js/jquery.cslider.js"></script>
-
-<!-- cycle -->
 <script src="./js/jquery.cycle.js"></script>
-
-<!-- carousel items -->
 <script src="./js/jquery.carouFredSel-6.0.3-packed.js"></script>
-
-<!-- twitter -->
 <script src="./js/jquery.tweet.js"></script>
-
-<!-- Call Showcase - change 4 from min:4 and max:4 to the number of items you want visible -->
 <script type="text/javascript">
 $(window).load(function(){			
 			$('#recent-projects').carouFredSel({

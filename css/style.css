@@ -768,3 +768,46 @@ box-shadow: 0 4px 25px rgba(0,0,0,0.3);}
 	opacity:0.7;
 }
 
+.slick {
+  background: #EFEFEF;
+  padding: 20px;
+}
+.slick .slick-slide {
+  outline: none !important;
+  -webkit-backface-visibility: hidden !important;
+}
+.slick .slick-slide * {
+  -webkit-backface-visibility: hidden !important;
+}
+
+.caption {
+  text-align: center;
+  padding: 10px 0 0 0;
+  color: #000;
+  margin: 0;
+  font-size: 24px;
+}
+
+.slick-prev, .slick-next {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.slick-next {
+  left: 105%;
+}
+
+.slick-prev {
+  right: 105%;
+}
+
+.slick-dots {
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+.slick-dots li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 8px;
+}
