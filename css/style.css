@@ -577,7 +577,8 @@ box-shadow: 0 4px 25px rgba(0,0,0,0.3);}
 .introboxfirst { padding: 20px 0px; border-right: 1px solid #111; }
 .introboxmiddle { padding: 20px 0px; border-left: 1px solid #555; border-right: 1px solid #111; }
 .introboxlast { padding: 20px 0px; border-left: 1px solid #555; }
-.introboxinner { width: 95%; padding-left: 20px; }
+.introboxinner { width: 95%; padding-left: 20px;}
+.introboxinner2 { width: 95%; margin-left: 10px; background-color:white;}
 .smallrightmargin { margin-right: 10px !Important }
 .simplebox { background: #fff; border: 1px solid #eee; padding: 15px 20px; font-size: 13px; border-left: 1px solid #0E8FAB; line-height: 26px; color: #999; }
 .simpleboxicon { font-size: 40px; float: left; padding-right: 20px; padding-bottom: 20px; color: #0E8FAB; }

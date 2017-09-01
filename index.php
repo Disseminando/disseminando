@@ -100,7 +100,7 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 <!-- UNDER SLIDER - BLACK AREA
 ================================================== -->
 <div class="undersliderblack">
-	<div class="grid">
+	<div class="grid">	
 		<div class="row space-bot">
 			<div class="c12">
 				<!--Box 1-->
@@ -111,8 +111,8 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 				</div>
 				<!--Box 2-->
 				<div class="c4 introbox introboxmiddle">
-					<div class="introboxinner">
-					<img src="images/banner01.png"></img>
+					<div class="introboxinner2">
+					<center><iframe height="180" width="auto" marginheight="0" src="https://www.internautascristaos.com/arquivos/versiculos/versiculos.html"  frameborder="no"  scrolling="auto" align="justify" name="textos" color="white"> </iframe></center>
 					</div>
 				</div>
 				<!--Box 3-->
@@ -125,8 +125,7 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 		</div>
 	</div>
 </div>
-<div class="shadowunderslider">
-</div>
+
 <!-- START content area
 ================================================== -->
 <div class="grid">
@@ -140,9 +139,14 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 			<div id="resultado"></div>
 			<br /><br />
 			<font size="3" align="justify" color="blue"><div id="conteudo"></div></font> 
-		</div>		
-		
+		</div>
 	</div>
+	<div class="container">
+        <div class="grid">	
+	        <left><iframe name="bibliaonline" frameborder="0" src="http://www.novageracao.org/biblia" width="100%" height="250"></iframe></left>
+		</div>
+	</div>
+	<br>
 		<div class="row space-top">
 		<div class="c12 space-top">
 			<h1 class="maintitle ">
