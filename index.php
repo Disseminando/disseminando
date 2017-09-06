@@ -126,8 +126,7 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 	</div>
 </div>
 
-<!-- START content area
-================================================== -->
+<!-- START content area -->
 <div class="grid">
 	<div class="row space-bot">
 		<!--CAIXA DE PESQUISA-->
@@ -135,72 +134,45 @@ $totalPages_ls_msgebd = ceil($totalRows_ls_msgebd/$maxRows_ls_msgebd)-1;
 			<h1 class="maintitle "><span>PESQUISAR</span></h1>
         </div>		
 		<div class="container">                			
-			<input type="text" id="pesquisar" placeholder="Informe o Titulo...." onkeyup="pesquisar(this.value)">
+			<input type="text" id="pesquisar" placeholder="Informe o Assunto...." onkeyup="pesquisar(this.value)">
 			<div id="resultado"></div>
 			<br /><br />
 			<font size="3" align="justify" color="blue"><div id="conteudo"></div></font> 
 		</div>
 	</div>
+<!-- Inicio da Biblia -->
 	<div class="container">
         <div class="grid">	
-	        <left><iframe name="bibliaonline" frameborder="0" src="http://www.novageracao.org/biblia" width="100%" height="250"></iframe></left>
+	        <left><iframe name="bibliaonline" frameborder="0" src="http://www.novageracao.org/biblia" width="100%" height="550"></iframe></left>
 		</div>
 	</div>
 	<br>
+<!-- Final da Biblia -->	
 		<div class="row space-top">
-		<div class="c12 space-top">
-			<h1 class="maintitle ">
-			<span>Categorias</span>
-			</h1>
-			<div id="google_translate_element"></div><script type="text/javascript">
-				function googleTranslateElementInit() {
-				  new google.translate.TranslateElement({pageLanguage: 'pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-72548584-1'}, 'google_translate_element');
-				}
-				</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-		<br>
-		<br>
-		</div>		
+		    <div class="c12 space-top">
+				<h1 class="maintitle ">
+				<span>Categorias</span>
+				</h1>
+				<div id="google_translate_element"></div><script type="text/javascript">
+					function googleTranslateElementInit() {
+					  new google.translate.TranslateElement({pageLanguage: 'pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-72548584-1'}, 'google_translate_element');
+					}
+					</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+				<br>
+				<br>
+		    </div>		
 		</div>
-	</div>
-		<div class="c4">
-			<h2 class="title hometitlebg"><i class="icon-qrcode smallrightmargin"></i> Escola Bíblica</h2>
-			<div class="noshadowbox">
-				<a href="escolaBiblica01.php"><img src="images/escola	01.jpg" class="logo" alt=""></a>
-				<p class="bottomlink">
-					<a href="escolaBiblica01.php" class="neutralbutton"><i class="icon-link"></i></a>
-				</p>				
-			</div>
-		</div>
-		<!--Box 2-->
-		<div class="c4">
-			<h2 class="title hometitlebg"><i class="icon-qrcode smallrightmargin"></i> Evangelismo</h2>
-			<div class="noshadowbox">
-				<a href="evangelismo01.php"><img src="images/evangelismo01.png" class="logo" alt=""></a>
-				<p class="bottomlink">
-					<a href="evangelismo01.php" class="neutralbutton"><i class="icon-link"></i></a>
-				</p>
-			</div>
-		</div>
-		<!--Box 3-->
-		<div class="c4">
-			<h2 class="title hometitlebg"><i class="icon-user" style="margin-right:10px;"></i>Oportunidades</h2>
-			<div class="noshadowbox">
-				<a href="http://rede.natura.net/espaco/disseminando" target="_blank"><img src="images/natura01.jpg" class="logo" alt="Natura Bem Estar" title="Revenda Natura Em Breve"></a>
-				<p class="bottomlink">
-					<a href="http://rede.natura.net/espaco/disseminando" target="_blank" class="neutralbutton"><i class="icon-link"></i></a>
-				</p>
-			</div>
-		</div>
-	</div>
-	<br>
+    </div>    
+</div>
+    <?php include('util/categoria01.html');?>	
 	<div class="grid">
 		<div class="shadowundertop">
 		</div>
 		<div class="row">
 			<div class="c12">
-				<h1 class="maintitle ">
-				<span>Mensagens Recentes</span>
-				</h1>
+			<br>
+	        <br>
+				<h1 class="maintitle "><span>Mensagens Recentes</span></h1>
 			    <?php do { ?>
 				<div id="content">
 					<div class="boxfourcolumns fw">
