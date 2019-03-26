@@ -60,7 +60,7 @@ function isAuthorized($strUsers, $strGroups, $UserName, $UserGroup) {
   return $isValid; 
 }
 
-$MM_restrictGoTo = "../index.php";
+$MM_restrictGoTo = "../administracao/painelControle.php";
 if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers, $_SESSION['MM_Username'], $_SESSION['MM_UserGroup'])))) {   
   $MM_qsChar = "?";
   $MM_referrer = $_SERVER['PHP_SELF'];
@@ -104,26 +104,16 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 }
 
-$maxRows_ls_clientes = 30;
-$pageNum_ls_clientes = 0;
-if (isset($_GET['pageNum_ls_clientes'])) {
-  $pageNum_ls_clientes = $_GET['pageNum_ls_clientes'];
-}
-$startRow_ls_clientes = $pageNum_ls_clientes * $maxRows_ls_clientes;
-
 mysql_select_db($database_con01, $con01);
-$query_ls_clientes = "SELECT id_cli, data_cli, cnpj_cli, nome_cli, end_cli, bairro_cli, cidade_cli, estado_cli, cep_cli, fone_cli, email_cli, contato_cli, situacao_cli, obs_cli, usuario_cli FROM adm_cliente ORDER BY data_cli DESC";
-$query_limit_ls_clientes = sprintf("%s LIMIT %d, %d", $query_ls_clientes, $startRow_ls_clientes, $maxRows_ls_clientes);
-$ls_clientes = mysql_query($query_limit_ls_clientes, $con01) or die(mysql_error());
-$row_ls_clientes = mysql_fetch_assoc($ls_clientes);
+$query_ls_msg = "SELECT msg_id, msg_data, msg_categoria, msg_titulo, msg_texto, msg_situacao, msg_foto, msg_diretorio, msg_cadastrador FROM mensagem ORDER BY msg_id DESC";
+$ls_msg = mysql_query($query_ls_msg, $con01) or die(mysql_error());
+$row_ls_msg = mysql_fetch_assoc($ls_msg);
+$totalRows_ls_msg = mysql_num_rows($ls_msg);
 
-if (isset($_GET['totalRows_ls_clientes'])) {
-  $totalRows_ls_clientes = $_GET['totalRows_ls_clientes'];
-} else {
-  $all_ls_clientes = mysql_query($query_ls_clientes);
-  $totalRows_ls_clientes = mysql_num_rows($all_ls_clientes);
-}
-$totalPages_ls_clientes = ceil($totalRows_ls_clientes/$maxRows_ls_clientes)-1;
+$query_ls_msg = "SELECT msg_id, msg_data, msg_categoria, msg_titulo, msg_texto, msg_situacao, msg_foto, msg_diretorio, msg_cadastrador FROM mensagem ORDER BY msg_id DESC";
+$ls_msg = mysql_query($query_ls_msg, $con01) or die(mysql_error());
+$row_ls_msg = mysql_fetch_assoc($ls_msg);
+$totalRows_ls_msg = mysql_num_rows($ls_msg);
 ?>
 <?php include("../Connections/con01.php");?>
 <!DOCTYPE HTML>
@@ -131,9 +121,7 @@ $totalPages_ls_clientes = ceil($totalRows_ls_clientes/$maxRows_ls_clientes)-1;
 <head>
 <meta name="viewport" content="width=device-width"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Disseminando | Sua fé sem fronteiras.</title>
-<!-- STYLES & JQUERY 
-================================================== -->
+<title>Disseminando Cristo</title>
 <link rel="stylesheet" type="text/css" href="../css/style.css"/>
 <link rel="stylesheet" type="text/css" href="../css/icons.css"/>
 <link rel="stylesheet" type="text/css" href="../css/skinblue.css"/>
@@ -148,23 +136,23 @@ $totalPages_ls_clientes = ceil($totalRows_ls_clientes/$maxRows_ls_clientes)-1;
 <!-- TOP LOGO & MENU
 ================================================== -->
 <div class="grid">
-<div class="row space-bot">
-<div class="c4"> <a href="#"> <img src="../images/logo02.jpg" class="logo" alt=""> </a> </div>
-<div class="c8">
-<nav id="topNav">
-<ul id="responsivemenu">
-<li class="active"><a href="painelControle.php"><i class="icon-home homeicon"></i><span class="showmobile">Inicio</span></a></li>
-<li><a href="#">Menu</a>
-  <ul style="display: none;">
-    <li><a href="adm_cad_contrato.php">Cadastro</a></li>
-    <li><a href="adm_cs_contrato.php">Consulta</a></li>
-    <li><a href="mensagemCadastro.php">Mensagem</a></li>
-    <li class="last"><a href="<?php echo $logoutAction ?>">Fechar</a></li>
-  </ul>
-</nav>
-</div>
-</div>
-</div>
+    <div class="row space-bot">
+        <div class="c4"> <a href="#"> <img src="../images/logo02.jpg" class="logo" alt=""> </a> </div>
+            <div class="c8">
+                    <nav id="topNav">
+                    <ul id="responsivemenu">
+                    <li class="active"><a href="painelControle.php"><i class="icon-home homeicon"></i><span class="showmobile">Inicio</span></a></li>
+                    <li><a href="#">Menu</a>
+                      <ul style="display: none;">    
+                        <li><a href="mensagemCadastro.php">Mensagem</a></li>
+                         <li><a href="videoLista.php">Video</a></li>
+                        <li class="last"><a href="<?php echo $logoutAction ?>">Fechar</a></li>
+                      </ul>
+                    </nav>
+            </div>
+        </div>
+    </div>
+ <br>
 <!-- HEADER
 ================================================== -->
 <div class="undermenuarea">
@@ -193,30 +181,28 @@ $totalPages_ls_clientes = ceil($totalRows_ls_clientes/$maxRows_ls_clientes)-1;
       </div>
     </div>
     <!-- end sidebar --> 
-	<div class="c9"><h1 class="maintitle space-top"> <span>Quadro Geral</span></h1></div>	
+	<div class="c9"><h1 class="maintitle space-top"> <span>Mensagens</span></h1></div>	
     <div class="container"> 
 	   <div class="table-responsive"> 
         <table class="table">
 		<thead>
         <tr>
           <td width="18%" align="center" bgcolor="#CCCCCC"><strong>Data</strong></td>
-          <td width="18%" align="center" bgcolor="#CCCCCC"><strong>Nome</strong></td>
-          <td width="15%" align="center" bgcolor="#CCCCCC"><strong>Telefone</strong></td>
-          <td width="20%" align="center" bgcolor="#CCCCCC"><strong>Email</strong></td>
-          <td width="22%" align="center" bgcolor="#CCCCCC"><strong>Contato</strong></td>
+          <td width="18%" align="center" bgcolor="#CCCCCC"><strong>Autor</strong></td>
+          <td width="15%" align="center" bgcolor="#CCCCCC"><strong>Titulo</strong></td>
         </tr>
 		</thead>
 		<tbody>
         <?php do { ?>
           <tr>
-            <td><?php echo $row_ls_clientes['data_cli']; ?></td>
-            <td><?php echo $row_ls_clientes['nome_cli']; ?></td>
-            <td><?php echo $row_ls_clientes['fone_cli']; ?></td>
-            <td><?php echo $row_ls_clientes['email_cli']; ?></td>
-            <td><?php echo $row_ls_clientes['contato_cli']; ?></td>
+            
+              <td><?php echo $row_ls_msg['msg_data']; ?></td>
+              <td><strong><font color="#0000CC"><?php echo $row_ls_msg['msg_titulo']; ?></font></strong></td>
+              <td><strong><font color="#FF0000"><a href="msg_consulta.php?msg_id=<?php echo $row_ls_msg['msg_id']; ?>"><?php echo $row_ls_msg['msg_cadastrador']; ?></a></font></strong></td>
+              
           </tr>
-          <?php } while ($row_ls_clientes = mysql_fetch_assoc($ls_clientes)); ?>
-		  </tbody>
+          <?php } while ($row_ls_msg = mysql_fetch_assoc($ls_msg)); ?>
+        </tbody>
         </table> 
 	  </div>
     </div>
@@ -290,5 +276,5 @@ $totalPages_ls_clientes = ceil($totalRows_ls_clientes/$maxRows_ls_clientes)-1;
 </body>
 </html>
 <?php
-mysql_free_result($ls_clientes);
+mysql_free_result($ls_msg);
 ?>

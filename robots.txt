@@ -1,0 +1,12 @@
+# robots.txt gerado em 12/09/2017
+# disseminando.com/robots-txt/
+User-agent: *
+Disallow:/acervo
+Disallow:/administracao
+Disallow:/banco
+Disallow:/ckeditor
+Disallow:/Connections
+Disallow:/financeiro
+Disallow:/images
+Disallow:/util
+

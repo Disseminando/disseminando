@@ -46,14 +46,12 @@ $totalRows_ls_msgebd = mysql_num_rows($ls_msgebd);
 <head>
 <meta name="viewport" content="width=device-width"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Disseminando | Sua fé sem fronteiras.</title>
-<!-- STYLES & JQUERY 
-================================================== -->
+<title>Disseminando Cristo</title>
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <link rel="stylesheet" type="text/css" href="css/icons.css"/>
-<link rel="stylesheet" type="text/css" href="css/skinblue.css"/><!-- change skin color -->
+<link rel="stylesheet" type="text/css" href="css/skinblue.css"/>
 <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
-<script src="js/jquery-1.9.0.min.js"></script><!-- the rest of the scripts at the bottom of the document -->
+<script src="js/jquery-1.9.0.min.js"></script>
 <!-- inicio do Analytics -->
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -83,33 +81,8 @@ $totalRows_ls_msgebd = mysql_num_rows($ls_msgebd);
 <div class="boxedtheme">
 <!-- TOP LOGO & MENU
 ================================================== -->
-<div class="grid">
-	<div class="row space-bot">
-		<!--Logo-->
-		<div class="c4">
-			<a href="index.php">
-			<img src="images/logo02.jpg" class="logo" alt="">
-			</a>
-		</div>
-		<!--Menu-->
-		<div class="c8">
-			<nav id="topNav">
-			<ul id="responsivemenu">
-				<li class="active"><a href="index.php"><i class="icon-home homeicon"></i><span class="showmobile">Inicio</span></a></li>
-				<li><a href="#">Menu</a>
-				<ul style="display: none;">
-					<li><a href="projetoAna.php">ANA</a></li>										
-					<li><a href="biblia01.php">Bíblia</a></li>
-					<li><a href="curriculum01.php">Curriculum</a></li>
-                    <li><a href="escolaBiblica01.php">EBD</a></li>
-				</ul>
-				</li>							
-				<li class="last"><a href="contato.php">Contato</a></li>
-			</ul>
-			</nav>
-		</div>
-	</div>
-</div>
+<?php include('util/menu01.html');?>
+<br>
 <!-- HEADER
 ================================================== -->
 <div class="undermenuarea">
@@ -118,7 +91,7 @@ $totalRows_ls_msgebd = mysql_num_rows($ls_msgebd);
 	<div class="grid">
 		<div class="row">
 			<div class="c8">
-				<h1 class="titlehead">Escola Biblica</h1>
+				<h1 class="titlehead">Evangelismo</h1>
 			</div>
 			
 		</div>
@@ -127,96 +100,111 @@ $totalRows_ls_msgebd = mysql_num_rows($ls_msgebd);
 <!-- CONTENT
 ================================================== -->
 <div class="grid">
-		<div class="shadowundertop">
-		</div>
-		<div class="row">
-			<!-- SIDEBAR -->	
-			<div class="c3">
-				<div class="leftsidebar">
-					<h2 class="title stresstitle">Parceiro</h2>
-					<hr class="hrtitle">
-                    <br />
-                    <br />
-				  <script language="JavaScript1.1" type="text/javascript" src="http://www.afiliados.posthaus.com.br/get_banner.jsp?mkt=PH6856&bann=62"></script>
-				</div>
-			</div><!-- end sidebar -->
-			
-			<!-- MAIN CONTENT -->
-			<div class="c9">
-				<h1 class="maintitle space-top">
-				<span>COMPARTILHANDO PALAVRA DE VIDA</span>
-				</h1>
-				<br>
-				<div id="google_translate_element"></div><script type="text/javascript">
-					function googleTranslateElementInit() {
-					  new google.translate.TranslateElement({pageLanguage: 'pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-72548584-1'}, 'google_translate_element');
-					}
-					</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-				<br>
-				<div class="table-responsive">      
-                  <table class="table" border="1">                    
-                    <tbody>
-                      <tr>
-                        <td rowspan="2"><?php
-                          echo '<img src="'.$row_ls_msgebd['msg_diretorio'].$row_ls_msgebd['msg_foto'].'"width="250" alt="250"</>';
-			                ?></td>
-                      </tr>
-                      <tr>                        
-                      </tr>
-                      <tr>
-                        <td>Data:&nbsp<?php echo $row_ls_msgebd['msg_data']; ?></td>
-                       
-                      </tr>
-                      <tr>
-                        <td>Titulo:&nbsp<?php echo $row_ls_msgebd['msg_titulo']; ?></td>
-                        
-                      </tr>
-                      <tr>
-                        <td>Autor:&nbsp<?php echo $row_ls_msgebd['msg_cadastrador']; ?></td>
-                        
-                      </tr>
-                      <tr>
-                        <td colspan="2">Mensagem:</td>
-                      </tr>
-                      <tr>
-                        <td colspan="2" style="text-align:justify"><?php echo $row_ls_msgebd['msg_texto']; ?></td>
-                      </tr>
-                    </tbody>
-                  </table>
-					<br>
-				  <div id="fb-root"></div>
-					<script>(function(d, s, id) {
-					  var js, fjs = d.getElementsByTagName(s)[0];
-					  if (d.getElementById(id)) return;
-					  js = d.createElement(s); js.id = id;
-					  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10";
-					  fjs.parentNode.insertBefore(js, fjs);
-					}(document, 'script', 'facebook-jssdk'));</script>
-					 <center>
-					<div class="fb-comments" data-href="http://disseminando.com/evangelismo02.php?msg_id=<?php echo $row_ls_msgebd['msg_id'];?> data-width="450" data-numposts="5"></div>
-					</center>				  
-              </div>
-          </div>
-	</div><!-- end main content -->			
-  </div>
+	<div class="shadowundertop"></div>
+	<div class="row">
+		<br>
+        <br>
+        <div class="container-fluid">
+        <?php include('util/anuncio03.html');?>
+        </div>
+        <br>		
+		<div id="google_translate_element"></div><script type="text/javascript">
+		function googleTranslateElementInit() {
+		  new google.translate.TranslateElement({pageLanguage: 'pt', multilanguagePage: true}, 'google_translate_element');
+		}
+		</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<br>
+		<div class="container-fluid">   
+            <table border="0">                    
+				<tbody>
+				  <tr>
+					<td rowspan="2"><?php
+					  echo '<img src="'.$row_ls_msgebd['msg_diretorio'].$row_ls_msgebd['msg_foto'].'"width="250" alt="250"</>';
+						?></td>
 
+				  </tr>
+				  <br>
+				  <tr>                        
+				  </tr>
+				  <tr>
+					<td>Data:&nbsp<?php echo $row_ls_msgebd['msg_data']; ?></td>
+				   
+				  </tr>
+				  <tr>
+					<td>Titulo:&nbsp<?php echo $row_ls_msgebd['msg_titulo']; ?></td>
+					
+				  </tr>
+				  <tr>
+					<td>Autor:&nbsp<?php echo $row_ls_msgebd['msg_cadastrador']; ?></td>
+					
+				  </tr>
+				  <tr>
+					<td colspan="2">Mensagem:</td>
+				  </tr>
+				  <tr>			                     
+						<td><?php echo $row_ls_msgebd['msg_texto']; ?></td>
+				  </tr>					  
+				</tbody>
+		    </table>
+        </div>					 
+    </div>
+</div>
+<br>		
 <!-- FOOTER
 ================================================== -->
 <?php include('util/rodape.html');?>
 <!-- JAVASCRIPTS
 ================================================== -->
-<!-- all -->
-<script src="js/modernizr-latest.js"></script>
-
-<!-- menu & scroll to top -->
-<script src="js/common.js"></script>
-
-<!-- cycle -->
-<script src="js/jquery.cycle.js"></script>
-
-<!-- twitter -->
-<script src="js/jquery.tweet.js"></script>
-
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js'></script>
+<script src="js/index.js"></script>
+<script src="./js/modernizr-latest.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/jquery.cslider.js"></script>
+<script src="./js/jquery.cycle.js"></script>
+<script src="./js/jquery.carouFredSel-6.0.3-packed.js"></script>
+<script src="./js/jquery.tweet.js"></script>
+<script type="text/javascript">
+$(window).load(function(){			
+			$('#recent-projects').carouFredSel({
+				responsive: true,
+				width: '100%',
+				auto: true,
+				circular	: true,
+				infinite	: false,
+				prev : {
+					button		: "#car_prev",
+					key			: "left",
+						},
+				next : {
+					button		: "#car_next",
+					key			: "right",
+							},
+				swipe: {
+					onMouse: true,
+					onTouch: true
+					},
+				scroll : 2000,
+				items: {
+					visible: {
+						min: 4,
+						max: 4
+					}
+				}
+			});
+		});	
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("img.imgOpa").hover(function() {
+      $(this).stop().animate({opacity: "0.6"}, 'slow');
+    },
+    function() {
+      $(this).stop().animate({opacity: "1.0"}, 'slow');
+    });
+  });
+</script>
 </body>
 </html>
 <?php

@@ -55,9 +55,17 @@
                     </div>
                 </div>
 			<div class="c3">
-				<h2 class="title"><i class="icon-link"></i> Parceiro</h2>
+				<h2 class="title"><i class="icon-link"></i> Parceiros</h2>
 				<hr class="footerstress">
-				<script language="JavaScript1.1" type="text/javascript" src="http://www.afiliados.posthaus.com.br/get_banner.jsp?mkt=PH6856&bann=58"></script>			
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- banner01 -->
+					<ins class="adsbygoogle"
+						 style="display:inline-block;width:250px;height:250px"
+						 data-ad-client="ca-pub-3345109171356225"
+						 data-ad-slot="2465506461"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
 			</div>
 		</div>
 </div><!-- end grid -->

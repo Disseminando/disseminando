@@ -46,9 +46,7 @@ $totalRows_ls_msgebd = mysql_num_rows($ls_msgebd);
 <head>
 <meta name="viewport" content="width=device-width"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Disseminando | Sua fé sem fronteiras.</title>
-<!-- STYLES & JQUERY 
-================================================== -->
+<title>Disseminando Cristo</title>
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <link rel="stylesheet" type="text/css" href="css/icons.css"/>
 <link rel="stylesheet" type="text/css" href="css/skinblue.css"/><!-- change skin color -->
@@ -80,32 +78,12 @@ $totalRows_ls_msgebd = mysql_num_rows($ls_msgebd);
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="boxedtheme">
 <!-- TOP LOGO & MENU
 ================================================== -->
-<div class="grid">
-	<div class="row space-bot">
-		<!--Logo-->
-		<div class="c4">
-			<a href="index.php">
-			<img src="images/logo02.jpg" class="logo" alt="">
-			</a>
-		</div>
-		<!--Menu-->
-		<div class="c8">
-			<nav id="topNav">
-			<ul id="responsivemenu">
-				<li class="active"><a href="index.php"><i class="icon-home homeicon"></i><span class="showmobile">Inicio</span></a></li>
-				<li><a href="#">Menu</a>
-				<ul style="display: none;">
-					<li><a href="projetoAna.php">ANA</a></li>										
-					<li><a href="biblia01.php">Bíblia</a></li>
-				</ul>
-				</li>							
-			</ul>
-			</nav>
-		</div>
-	</div>
+<div class="boxedtheme">
+	<?php include('util/menu01.html');?>
+    <br>
+    <br>
 </div>
 <!-- HEADER
 ================================================== -->
@@ -129,26 +107,21 @@ $totalRows_ls_msgebd = mysql_num_rows($ls_msgebd);
 		<div class="row">
 			<!-- SIDEBAR -->	
 			<div class="c3">
-				<div class="leftsidebar">
-					<h2 class="title stresstitle">Parceiro</h2>
-					<hr class="hrtitle">
-                    <br />
-                    <br />
-				  <script language="JavaScript1.1" type="text/javascript" src="http://www.afiliados.posthaus.com.br/get_banner.jsp?mkt=PH6856&bann=201"></script>
-				</div>
-			</div><!-- end sidebar -->
-			
-			<!-- MAIN CONTENT -->
+
+			</div><!-- end sidebar -->			
 			<div class="c9">
-				<h1 class="maintitle space-top">
-				<span>COMPARTILHANDO CONHECIMENTO</span>
-				</h1>
 				<br>
+                <br>
+                <!-- ANUNCIO 02 ================================================== -->
+                <div class="container-fluid">
+                <?php include('util/anuncio03.html');?>
+                </div>
+                <br>		
 				<div id="google_translate_element"></div><script type="text/javascript">
-					function googleTranslateElementInit() {
-					  new google.translate.TranslateElement({pageLanguage: 'pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-72548584-1'}, 'google_translate_element');
-					}
-					</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+				function googleTranslateElementInit() {
+				  new google.translate.TranslateElement({pageLanguage: 'pt', multilanguagePage: true}, 'google_translate_element');
+				}
+				</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 				<br>
 				<div class="table-responsive">        
                   <table class="table">
@@ -156,6 +129,7 @@ $totalRows_ls_msgebd = mysql_num_rows($ls_msgebd);
                       <tr>
                         <th>&nbsp;</th>
                         <th><center>Titulo</center></th>
+                        <th><center>Autor</center></th>
                       </tr>
                     </thead>
                     <?php do { ?>
@@ -166,6 +140,7 @@ $totalRows_ls_msgebd = mysql_num_rows($ls_msgebd);
 			                ?></center>
                         </td>
                         <td width="50%"><strong><a href="escolaBiblica02.php?msg_id=<?php echo $row_ls_msgebd['msg_id']; ?>"><?php echo $row_ls_msgebd['msg_titulo']; ?></a></strong>                       </td>
+                        <td><strong><?php echo $row_ls_msgebd['msg_cadastrador']; ?></strong></td>
                       </tr>
                     </tbody>
                      <?php } while ($row_ls_msgebd = mysql_fetch_assoc($ls_msgebd)); ?>
@@ -174,26 +149,64 @@ $totalRows_ls_msgebd = mysql_num_rows($ls_msgebd);
               </div>
           </div>
 	</div><!-- end main content -->			
-  </div>
-<!-- end grid -->
-
+</div>
+<!-- Divulgacao de video -->
+<?php include('util/ebdVideos.php');?>			
 <!-- FOOTER
 ================================================== -->
 <?php include('util/rodape.html');?>
 <!-- JAVASCRIPTS
 ================================================== -->
-<!-- all -->
-<script src="js/modernizr-latest.js"></script>
-
-<!-- menu & scroll to top -->
-<script src="js/common.js"></script>
-
-<!-- cycle -->
-<script src="js/jquery.cycle.js"></script>
-
-<!-- twitter -->
-<script src="js/jquery.tweet.js"></script>
-
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js'></script>
+<script src="js/index.js"></script>
+<script src="./js/modernizr-latest.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/jquery.cslider.js"></script>
+<script src="./js/jquery.cycle.js"></script>
+<script src="./js/jquery.carouFredSel-6.0.3-packed.js"></script>
+<script src="./js/jquery.tweet.js"></script>
+<script type="text/javascript">
+$(window).load(function(){			
+			$('#recent-projects').carouFredSel({
+				responsive: true,
+				width: '100%',
+				auto: true,
+				circular	: true,
+				infinite	: false,
+				prev : {
+					button		: "#car_prev",
+					key			: "left",
+						},
+				next : {
+					button		: "#car_next",
+					key			: "right",
+							},
+				swipe: {
+					onMouse: true,
+					onTouch: true
+					},
+				scroll : 2000,
+				items: {
+					visible: {
+						min: 4,
+						max: 4
+					}
+				}
+			});
+		});	
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("img.imgOpa").hover(function() {
+      $(this).stop().animate({opacity: "0.6"}, 'slow');
+    },
+    function() {
+      $(this).stop().animate({opacity: "1.0"}, 'slow');
+    });
+  });
+</script>
 </body>
 </html>
 <?php

@@ -2,23 +2,17 @@
 <html>
 <meta name="viewport" content="width=device-width"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Disseminando | Sua fé sem fronteiras.</title>
-<!-- STYLES & JQUERY 
-================================================== -->
+<title>Disseminando - Projeto Ana</title>
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <link rel="stylesheet" type="text/css" href="css/icons.css"/>
-<link rel="stylesheet" type="text/css" href="css/skinblue.css"/><!-- change skin color -->
+<link rel="stylesheet" type="text/css" href="css/skinblue.css"/>
 <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
-<script src="js/jquery-1.9.0.min.js"></script><!-- the rest of the scripts at the bottom of the document -->
+<script src="js/jquery-1.9.0.min.js"></script>
 </head>
 <body>
 <div class="boxedtheme">
-<!-- TOP LOGO & MENU
-================================================== -->
 <?php include('util/menu01.html');?>
 <br>
-<!-- HEADER
-================================================== -->
 <div class="undermenuarea">
 	<div class="boxedshadow">
 	</div>
@@ -26,29 +20,21 @@
 		<div class="row">
 			<div class="c8">
 				<h1 class="titlehead">Projeto Ana</h1>
-			</div>
-			
+			</div>			
 		</div>
 	</div>
 </div>
-<!-- CONTENT
-================================================== -->
 <div class="grid">
 		<div class="shadowundertop">
 		</div>
 		<div class="row">		
-			
-			<!-- MAIN CONTENT -->
 			<div class="c9">
-				<h1 class="maintitle space-top">
-				<span>Saiba mais.....</span>
-				</h1>
 				<div id="google_translate_element"></div><script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-72548584-1'}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-		<br>
+				function googleTranslateElementInit() {
+				  new google.translate.TranslateElement({pageLanguage: 'pt', multilanguagePage: true}, 'google_translate_element');
+				}
+				</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+				<br>
 				<p align="justify">
 					<strong><font color="blue" size="3">“Por este menino orava eu; e o Senhor atendeu à minha petição, que eu lhe tinha feito.” 1 Samuel 1.27</font></strong><br>
 					<br>
@@ -83,43 +69,61 @@ function googleTranslateElementInit() {
 					<br><br>
 					<strong>Telefone: (22) 99900 6333 – WhatsApp</strong>
 					</font>
-				</p>
-				
-			</div><!-- end main content -->
-			
-			<!-- SIDEBAR -->	
+				</p>				
+			</div>
 			<div class="c3">
 				<div class="rightsidebar">
 					<hr class="hrtitle">
-					<img src="images/ana01.jpg" alt="">
+					<img src="images/ana01.jpg" alt="Projeto Ana">
 					<br>
 					<br>
 					<br>
 					<h1 class="maintitle space-top">
-					<span>Parceiro</span>
+					<span>Parceiros</span>
 					</h1>
-					<script language="JavaScript1.1" type="text/javascript" src="http://www.afiliados.posthaus.com.br/get_banner.jsp?mkt=PH6491&bann=132"></script>					
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- banner01 -->
+					<ins class="adsbygoogle"
+						 style="display:inline-block;width:250px;height:250px"
+						 data-ad-client="ca-pub-3345109171356225"
+						 data-ad-slot="2465506461"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>				
+				    <br>
+				    <br>
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- banner01 -->
+					<ins class="adsbygoogle"
+						 style="display:inline-block;width:250px;height:250px"
+						 data-ad-client="ca-pub-3345109171356225"
+						 data-ad-slot="2465506461"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+					<br>
+					<br>
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- banner01 -->
+					<ins class="adsbygoogle"
+						 style="display:inline-block;width:250px;height:250px"
+						 data-ad-client="ca-pub-3345109171356225"
+						 data-ad-slot="2465506461"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
 				</div>
-			</div><!-- end sidebar -->			
+			</div>	
 		</div>
-</div><!-- end grid -->
-
+</div>
 <!-- FOOTER
 ================================================== -->
 <?php include('util/rodape.html');?>
 <!-- JAVASCRIPTS
 ================================================== -->
-<!-- all -->
 <script src="js/modernizr-latest.js"></script>
-
-<!-- menu & scroll to top -->
 <script src="js/common.js"></script>
-
-<!-- cycle -->
 <script src="js/jquery.cycle.js"></script>
-
-<!-- twitter -->
 <script src="js/jquery.tweet.js"></script>
-
 </body>
 </html>

@@ -60,7 +60,7 @@ function isAuthorized($strUsers, $strGroups, $UserName, $UserGroup) {
   return $isValid; 
 }
 
-$MM_restrictGoTo = "../index.php";
+$MM_restrictGoTo = "../administracao/painelControle.php";
 if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers, $_SESSION['MM_Username'], $_SESSION['MM_UserGroup'])))) {   
   $MM_qsChar = "?";
   $MM_referrer = $_SERVER['PHP_SELF'];
@@ -121,9 +121,7 @@ $totalRows_ls_situacao = mysql_num_rows($ls_situacao);
 <head>
 <meta name="viewport" content="width=device-width"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Disseminando | Sua fé sem fronteiras.</title>
-<!-- STYLES & JQUERY 
-================================================== -->
+<title>Disseminando Cristo</title>
 <link rel="stylesheet" type="text/css" href="../css/style.css"/>
 <link rel="stylesheet" type="text/css" href="../css/icons.css"/>
 <link rel="stylesheet" type="text/css" href="../css/skinblue.css"/>
@@ -144,17 +142,17 @@ $totalRows_ls_situacao = mysql_num_rows($ls_situacao);
 <div class="c8">
 <nav id="topNav">
 <ul id="responsivemenu">
-<li class="active"><a href="painelControle.php"><i class="icon-home homeicon"></i><span class="showmobile">Inicio</span></a></li>
+<li class="active"><a href="adm_menu_principal.php"><i class="icon-home homeicon"></i><span class="showmobile">Inicio</span></a></li>
 <li><a href="#">Menu</a>
-  <ul style="display: none;">
-    <li><a href="adm_cad_contrato.php">Cadastro</a></li>
-    <li><a href="adm_cs_contrato.php">Consulta</a></li>
+  <ul style="display: none;">    
+     <li><a href="videoCadastro.php">Video</a></li>
     <li class="last"><a href="<?php echo $logoutAction ?>">Fechar</a></li>
   </ul>
 </nav>
 </div>
 </div>
 </div>
+<br>
 <!-- HEADER
 ================================================== -->
 <div class="undermenuarea">
@@ -162,7 +160,7 @@ $totalRows_ls_situacao = mysql_num_rows($ls_situacao);
   <div class="grid">
     <div class="row">
       <div class="c8">
-        <h1 class="titlehead">Painel de Controle</h1>
+        <h1 class="titlehead">Cadastra Mensagem</h1>
       </div>
       <div class="c4">
         <h1 class="titlehead rightareaheader"><i class="icon-map-marker">&nbsp Usuario:&nbsp<?php echo $_SESSION['MM_Username'];?></i></h1>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_ls_situa" value="name:sit_cad_id;datatype:int,name:sit_cad_nome;datatype:string" />
+	<infoitem key="UD_ls_dados_bancarios" value="name:banco_id;datatype:int,name:banco_data;datatype:date,name:banco_numero;datatype:string,name:banco_agencia;datatype:string,name:banco_conta;datatype:string,name:banco_situa;datatype:int,name:banco_usuario;datatype:string" />
+	<infoitem key="UD_ls_banco" value="name:banco_id;datatype:int,name:banco_numero;datatype:string" />
+</info>

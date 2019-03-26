@@ -148,8 +148,9 @@ $totalRows_ls_situacao = mysql_num_rows($ls_situacao);
 <li class="active"><a href="painelControle.php"><i class="icon-home homeicon"></i><span class="showmobile">Inicio</span></a></li>
 <li><a href="#">Menu</a>
   <ul style="display: none;">
-    <li><a href="adm_cad_contrato.php">Cadastro</a></li>
-    <li><a href="adm_cs_contrato.php">Consulta</a></li>
+    <li><a href="#">Anuncio</a></li>
+    <li><a href="mensagemCadastro.php">Mensagem</a></li>
+    <li><a href="#">Vagas</a></li>
     <li class="last"><a href="<?php echo $logoutAction ?>">Fechar</a></li>
   </ul>
 </nav>

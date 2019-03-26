@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_ls_categoria" value="name:cat_id;datatype:int,name:cat_nome;datatype:string" />
+	<infoitem key="UD_ls_situacao" value="name:sit_fin_id;datatype:int,name:sit_fin_tipo;datatype:string" />
+	<infoitem key="UD_ls_pagamento" value="name:id_tp_pag;datatype:int,name:tipo_pag;datatype:string" />
+	<infoitem key="UD_ls_despesas" value="name:lanc_situa;datatype:int,name:lanc_credor;datatype:string,name:lanc_valor;datatype:real,name:lanc_venc;datatype:date" />
+</info>

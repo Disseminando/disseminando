@@ -1,3 +1,4 @@
+<?php require_once('../Connections/con01.php'); ?>
 <?php
 //initialize the session
 if (!isset($_SESSION)) {
@@ -30,7 +31,7 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
 if (!isset($_SESSION)) {
   session_start();
 }
-$MM_authorizedUsers = "1,2";
+$MM_authorizedUsers = "1,2,3,4,5";
 $MM_donotCheckaccess = "false";
 
 // *** Restrict Access To Page: Grant or deny access to this page
@@ -71,7 +72,49 @@ if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers,
   exit;
 }
 ?>
-<?php include("../Connections/con01.php");?>
+<?php
+if (!function_exists("GetSQLValueString")) {
+function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
+{
+  if (PHP_VERSION < 6) {
+    $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
+  }
+
+  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+
+  switch ($theType) {
+    case "text":
+      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+      break;    
+    case "long":
+    case "int":
+      $theValue = ($theValue != "") ? intval($theValue) : "NULL";
+      break;
+    case "double":
+      $theValue = ($theValue != "") ? doubleval($theValue) : "NULL";
+      break;
+    case "date":
+      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+      break;
+    case "defined":
+      $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
+      break;
+  }
+  return $theValue;
+}
+}
+
+$usuario=$_SESSION['MM_Username'];
+$ano= date("Y");
+$mes= date("m");
+
+mysql_select_db($database_con01, $con01);
+$query_ls_contas = "SELECT lanc_id, lanc_data, lanc_cat, lanc_situa, lanc_tp_pag, lanc_credor, lanc_valor, lanc_venc, lanc_parcela, lanc_obs, lanc_usuario FROM fin_lancamento WHERE lanc_usuario='$usuario' AND YEAR(lanc_venc)='$ano' AND MONTH(lanc_venc)='$mes' ORDER BY lanc_id DESC";
+$ls_contas = mysql_query($query_ls_contas, $con01) or die(mysql_error());
+$row_ls_contas = mysql_fetch_assoc($ls_contas);
+$totalRows_ls_contas = mysql_num_rows($ls_contas);
+
+?>
 <!DOCTYPE HTML>
 <html>
 <meta name="viewport" content="width=device-width"/>
@@ -101,7 +144,7 @@ if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers,
 <li><a href="#">Menu</a>
   <ul style="display: none;">
     <li><a href="adm_menu_principal.php">Administrativo</a></li>
-    <li><a href="#">Financeiro</a></li>
+    <li><a href="../financeiro/fin_menu_principal.php">Financeiro</a></li>
     <li class="last"><a href="<?php echo $logoutAction ?>">Fechar</a></li>
   </ul>
 </nav>
@@ -123,8 +166,7 @@ if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers,
     </div>
   </div>
 </div>
-<!-- CONTENT
-================================================== -->
+<!-- CONTENT ================================================== -->
 <div class="grid">
   <div class="shadowundertop"> </div>
   <div class="row"> 
@@ -140,13 +182,34 @@ if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers,
     
     <!-- MAIN CONTENT -->
     <div class="c9">
-      <h1 class="maintitle space-top"> <span>Quadro Geral</span> </h1>
-       <br>
-        <br>
-        <br>      
-    </div>
-    <!-- end main content --> 
-    <!-- end main content --> 
+      <h1 class="maintitle space-top"> <span>Minhas Contas</span> </h1>
+	  <br>
+	  <?php
+		  $res=$totalRows_ls_contas;							      
+		  if($res>0)
+	  {?> 
+      <table border="1" cellpadding="10" cellspacing="10">
+        <tr>
+          <td bgcolor="#CCCCCC"><strong>Data</strong></td>
+          <td bgcolor="#CCCCCC"><strong>Descrição</strong></td>
+          <td bgcolor="#CCCCCC"><strong>Valor</strong></td>
+          <td bgcolor="#CCCCCC"><strong>Vencimento</strong></td>
+        </tr>
+        <?php do { ?>
+          <tr>
+            <td><?php echo $row_ls_contas['lanc_data']; ?></td>
+            <td><?php echo $row_ls_contas['lanc_credor']; ?></td>
+            <td><?php echo $row_ls_contas['lanc_valor']; ?></td>
+            <td><?php echo $row_ls_contas['lanc_venc']; ?></td>
+          </tr>
+          <?php } while ($row_ls_contas = mysql_fetch_assoc($ls_contas)); ?>
+      </table> 
+        <?php } else {			   
+										 
+					echo "Não foi encontrado nenhum registro.";
+				 }
+		?>	  
+    </div> 
   </div>
 </div>
 <!-- end grid --> 
@@ -205,8 +268,8 @@ if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers,
 </div>
 </div>
 
-<!-- JAVASCRIPTS
-================================================== -->
+<!-- JAVASCRIPTS ================================================= -->
+
 <!-- all -->
 <script src="../js/modernizr-latest.js"></script>
 
@@ -221,3 +284,6 @@ if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers,
 
 </body>
 </html>
+<?php
+mysql_free_result($ls_contas);
+?>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_ls_categoria" value="name:cat_id;datatype:int,name:cat_nome;datatype:string" />
+</info>

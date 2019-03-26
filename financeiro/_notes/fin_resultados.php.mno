@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_ls_despesas" value="name:lanc_id;datatype:int,name:lanc_data;datatype:date,name:lanc_cat;datatype:int,name:lanc_situa;datatype:int,name:lanc_tp_pag;datatype:int,name:lanc_credor;datatype:string,name:lanc_valor;datatype:real,name:lanc_venc;datatype:date,name:lanc_parcela;datatype:int,name:lanc_obs;datatype:blob,name:lanc_usuario;datatype:string" />
+</info>
