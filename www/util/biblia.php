@@ -11,8 +11,8 @@
         <div style="text-align: center; margin: auto">
         <div style="font-size: 1.5em; text-align: center; color: blue">Parceiro-IMECD MISSÕES</div>
         	<br>
-        <object type="application/x-shockwave-flash" style="width:320px; height:250px;" data="//www.youtube.com/v/FrqR7TObVLw?color2=FBE9EC&amp;version=3">
-        <param name="movie" value="//www.youtube.com/v/FrqR7TObVLw?color2=FBE9EC&amp;version=3" />
+        <object type="application/x-shockwave-flash" style="width:320px; height:250px;" data="//www.youtube.com/v/Q6LVpg3CRm4?color2=FBE9EC&amp;version=3">
+        <param name="movie" value="//www.youtube.com/v/Q6LVpg3CRm4?color2=FBE9EC&amp;version=3" />
         <param name="allowFullScreen" value="true" />
         <param name="allowscriptaccess" value="always" />
         </object>
